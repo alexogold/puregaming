@@ -1,0 +1,232 @@
+{
+    "white": {
+        "action": "curl",
+        "folder": {
+            "names": [
+                "white"
+            ]
+        },
+        "redirect": {
+            "type": 303,
+            "urls": [
+                "https://ya.ru",
+                "https://google.com"
+            ]
+        },
+        "curl": {
+            "urls": [
+                "https://www.9111.ru/"
+            ]
+        },
+        "error": {
+            "codes": []
+        },
+        "domainfilter": {
+            "use": false,
+            "domains": [
+                {
+                    "name": "lalala.xxx.com",
+                    "action": "site:white"
+                },
+                {
+                    "name": "lamama.xxx.com",
+                    "action": "site:white"
+                }
+            ]
+        },
+        "jschecks": {
+            "enabled": true,
+            "events": [
+                "audiocontext",
+                "timezone"
+            ],
+            "timeout": 10000,
+            "obfuscate": true,
+            "timezone": true,
+            "tzstart": -3,
+            "tzend": 3
+        }
+    },
+    "black": {
+        "prelanding": {
+            "action": "none",
+            "folders": [
+                "lrlpl"
+            ],
+            "redirect": {
+                "urls": [
+                    "https://ya.ru",
+                    "https://google.com"
+                ],
+                "type": 302
+            }
+        },
+        "landing": {
+            "action": "redirect",
+            "folder": {
+                "names": [
+                    "green",
+                    "yellow"
+                ],
+                "conversions": {
+                    "script": "order.php",
+                    "logonbuttonclick": false
+                },
+                "customthankyoupage": {
+                    "use": true,
+                    "language": "RU",
+                    "upsell": {
+                        "use": false,
+                        "imgdir": "img",
+                        "header": "This is a header!",
+                        "text": "This is a text!",
+                        "url": "http://ya.ru"
+                    }
+                }
+            },
+            "redirect": {
+                "urls": [
+                    "https://microsoft.com"
+                ],
+                "type": 307
+            }
+        },
+        "jsconnect": "redirect"
+    },
+    "pixels": {
+        "ya": {
+            "id": ""
+        },
+        "gtm": {
+            "id": ""
+        },
+        "fb": {
+            "subname": "px",
+            "pageview": true,
+            "viewcontent": {
+                "use": true,
+                "time": 30,
+                "percent": 75
+            },
+            "conversion": {
+                "event": "Lead",
+                "fireonbutton": false
+            },
+            "cloak": false
+        }
+    },
+    "tds": {
+        "mode": "on",
+        "saveuserflow": false,
+        "filters": {
+            "allowed": {
+                "countries": [
+                    "UA",
+                    "BY",
+                    "RU"
+                ],
+                "os": [
+                    "Android",
+                    "iOS",
+                    "Windows",
+                    "OS X"
+                ],
+                "inurl": [],
+                "languages": []
+            },
+            "blocked": {
+                "ips": {
+                    "filename": "",
+                    "cidrformat": false
+                },
+                "tokens": [],
+                "useragents": [
+                    "facebook",
+                    "Facebot",
+                    "curl",
+                    "gce-spider",
+                    "yandex.com/bots",
+                    "OdklBot"
+                ],
+                "isps": [
+                    "facebook",
+                    "google",
+                    "yandex",
+                    "amazon",
+                    "azure",
+                    "digitalocean",
+                    "microsoft"
+                ],
+                "referer": {
+                    "empty": false,
+                    "stopwords": []
+                },
+                "vpntor": false
+            }
+        }
+    },
+    "scripts": {
+        "back": {
+            "action": "off",
+            "value": "https://ya.ru"
+        },
+        "disabletextcopy": false,
+        "prelandingreplace": {
+            "use": false,
+            "url": "https://ya.ru"
+        },
+        "landingreplace": {
+            "use": false,
+            "url": "https://ya.ru"
+        },
+        "phonemask": {
+            "use": true,
+            "mask": "+7(\\\\999)999-99-99"
+        },
+        "comebacker": false,
+        "callbacker": false,
+        "addedtocart": false
+    },
+    "subids": [
+        {
+            "name": "subid",
+            "rewrite": "sub1"
+        },
+        {
+            "name": "adn",
+            "rewrite": "sub2"
+        },
+        {
+            "name": "ad",
+            "rewrite": "sub3"
+        },
+        {
+            "name": "pl",
+            "rewrite": "sub4"
+        }
+    ],
+    "statistics": {
+        "password": 12345,
+        "subnames": [
+            {
+                "name": "adn",
+                "value": "Adset"
+            },
+            {
+                "name": "ad",
+                "value": "Creative"
+            },
+            {
+                "name": "pl",
+                "value": "Placement"
+            }
+        ],
+        "postback": {
+            "lead": "Lead",
+            "purchase": "Purchase",
+            "reject": "Reject",
+            "trash": "Trash"
+        },
+        "timezone": "Europe/Moscow"
+    }
+}
